@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 def run_simulation(V, potential_name, p, sigma, x0, m=1, hbar=1, xmin=-5, xmax=5, N=1000):
+
     # --- Konfiguracja siatki ---
     x = np.linspace(xmin, xmax, N)
     dx = x[1] - x[0]
@@ -84,4 +85,10 @@ def run_simulation(V, potential_name, p, sigma, x0, m=1, hbar=1, xmin=-5, xmax=5
         return line_prob, line_real, line_imag,
 
     ani = FuncAnimation(fig, update, frames=400, init_func=init, blit=True, interval=20)
+
+    manager = plt.get_current_fig_manager()
+    window = manager.window 
+    window.title("Quantum Wave - Potencjał: " + potential_name.replace('_', ' ').title())
+    window.iconbitmap("public/icon.ico")
+
     plt.show()
