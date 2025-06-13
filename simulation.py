@@ -28,8 +28,9 @@ def run_simulation(V, potential_name, p, sigma, x0, m=1, hbar=1, xmin=-5, xmax=5
     print("Diagonalizacja zakończona.")
     
     # --- Normalizacja funkcji falowych ---
-    A_psi = np.sum(np.abs(psi[0])**2 * dx)
-    psi = psi / np.sqrt(A_psi)
+    for i in range(len(psi)):
+        norm = np.sum(np.abs(psi[i])**2 * dx)
+        psi[i] /= np.sqrt(norm)
 
     # --- Obliczanie współczynników rozwinięcia ---
     c = np.zeros(len(E), dtype=np.complex128)
