@@ -10,7 +10,7 @@ x0_init = -2.0
 # Zmień tę jedną linię, aby uruchomić inną symulację!
 # ? Dostępne opcje: 'brak', 'bariera A', 'bariera B', 'bariera waska', 'bariera nieskonczona', 'skok', 'spadek' , 'studnia', 'studnia nieskonczona', 'trololololo'
 
-POTENTIAL_CHOICE = 'bariera A'
+POTENTIAL_CHOICE = 'bariera waska'
 
 # ! === KONIEC WYBORU SYMULACJI === ! #
     

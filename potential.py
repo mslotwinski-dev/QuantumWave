@@ -15,7 +15,7 @@ def get_potential(name, x, E_kinetyczna, p):
         V[(x < 0)] = E_kinetyczna
 
     elif name == 'bariera waska':
-        V[(x > 0) & (x < 1)] = E_kinetyczna * 10000
+        V[(x > 0) & (x < 1)] = E_kinetyczna
 
     elif name == 'bariera nieskonczona':
         V[(x > 0) & (x < 1)] = E_kinetyczna * 10000
